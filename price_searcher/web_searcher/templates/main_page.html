@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Canadian Yugioh Price Checker</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/main_page_style.css">
+    <body>
+        <header class="page_header">
+
+        </header>
+        {% for listing in card_listings %}
+            <section class="listing_section">
+                Name: {{ listing.name }}
+                Vendor: {{ listing.vendor }}
+                Price: {{ listing.price }}
+                Shipping cost: {{ listing.shipping_cost }}
+            </section>
+        {% endfor %}
+    </body>
+</html> 
