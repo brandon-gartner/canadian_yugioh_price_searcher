@@ -1,0 +1,13 @@
+html {
+    background-color: red; 
+}
+
+header {
+    position: fixed;
+}
+
+.page_title {
+    font-size: 38px;
+    color: red;
+    margin: 0 0 10% 0;
+}
