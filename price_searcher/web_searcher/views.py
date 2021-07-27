@@ -1,7 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from MainApp import MainCardSearcher
+
+#from MainApp import MainCardSearcher
+import MainApp.MainCardSearcher
+#from MainApp import MainCardSearcher
+#from MainApp import MainCardSearcher
+#from MainApp import MainCardSearcher
+#from MainApp import MainCardSearcher
+#from MainApp import MainCardSearcher
+
 # Create your views here.
 
 def index(request):
