@@ -15,19 +15,19 @@ const getFaceToFace = async (cardNameSearch) => {
 
         //filtering out the irrelevant data
         let cardInfo = $('ul > li > article')
-        let cardText = cardInfo.find('div.card-body > h4.card-title > a')
+        let cardTitle = cardInfo.find('div.card-body > h4.card-title > a')
         let cardPrice = cardInfo.find('div.card-text > div.card-addtoCart > div.card-price > div.primary-price--withoutTax > span.price--withoutTax')
         let cardLink = cardInfo.find('figure.card-figure > a')
 
         //transforming the data into JS arrays so I can use it more easily.
-        var cardTextArray = cardText.toArray().map((element) => { return $(element).text().trim() });
+        var cardTitleArray = cardTitle.toArray().map((element) => { return $(element).text().trim() });
         var cardPriceArray = cardPrice.toArray().map((element) => { return $(element).text() });
-        var cardLinkArray = cardLink.toArray().map((element) => {return $(element) });
+        var cardLinkArray = cardLink.toArray().map((element) => { return $(element) });
         
         //fills the array with JS objects containing the card's title/set, its price, and the seller who is selling it.
-        for (var i = 0; i < cardText.length; i++){
+        for (var i = 0; i < cardTitle.length; i++){
             var listing = {
-                title: cardTextArray[i],
+                title: cardTitleArray[i],
                 price: cardPriceArray[i],
                 seller: "facetofacegames.com",
                 link: cardLinkArray[i].attr('href'),
